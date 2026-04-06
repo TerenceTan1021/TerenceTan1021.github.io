@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terence Tan | AI Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f7fa;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
+        /* Sections */
+        section {
+            background: white;
+            margin: 30px 0;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #764ba2;
+            margin: 15px 0 10px 0;
+        }
+
+        /* Projects */
+        .project {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .project:last-child {
+            border-bottom: none;
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .project-date {
+            color: #888;
+            font-size: 0.9rem;
+            margin-left: 10px;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #4f46e5;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 5px 5px 0 0;
+        }
+
+        .github-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .github-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .skill {
+            background: #f3f4f6;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Contact */
+        .contact-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .contact-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Terence Tan</h1>
+            <p>AI Engineer | CS Grad @ UC San Diego | RAG, LLMs, PyTorch</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- About Section -->
+        <section>
+            <h2>About Me</h2>
+            <p>I'm a UC San Diego Computer Science graduate who builds AI applications that actually help people. My RAG PDF Assistant helps students learn faster from lecture slides. I also trained a generative music model in PyTorch because I love making music as a hobby, and built a game recommender system for fellow gamers.</p>
+            <br>
+            <p>Before AI, I worked at my uncle's restaurant — cross-trained as cashier, cook, and food prep, and trained new hires. I learned to stay calm under pressure, be reliable, and adapt quickly. I'm looking for an entry-level AI Engineer role where I can build tools that make a difference.</p>
+        </section>
+
+        <!-- Projects Section -->
+        <section>
+            <h2>Featured Projects</h2>
+
+            <div class="project">
+                <div class="project-title">
+                    RAG PDF Assistant 
+                    <span class="project-date">(2026)</span>
+                </div>
+                <p>Document Q&A system that helps students upload lecture slides and ask questions. Built with LangChain, ChromaDB, and Streamlit. Features source tracking and text-to-speech support.</p>
+                <div>
+                    <span class="tech-tag">LangChain</span>
+                    <span class="tech-tag">ChromaDB</span>
+                    <span class="tech-tag">Streamlit</span>
+                    <span class="tech-tag">Python</span>
+                </div>
+                <a href="https://github.com/TerenceTan1021/RAG_Application" class="github-link" target="_blank">🔗 GitHub Repository</a>
+            </div>
+
+            <div class="project">
+                <div class="project-title">
+                    Generative Music AI with LSTM 
+                    <span class="project-date">(2025)</span>
+                </div>
+                <p>Designed and trained an LSTM-based generative AI model for Lo-fi music generation using 500+ MIDI files. Built with PyTorch, featuring a custom REMI-style tokenizer.</p>
+                <div>
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">LSTM</span>
+                    <span class="tech-tag">MIDI</span>
+                    <span class="tech-tag">Python</span>
+                </div>
+                <a href="https://github.com/TerenceTan1021/153R_Assignment2" class="github-link" target="_blank">🔗 GitHub Repository</a>
+            </div>
+
+            <div class="project">
+                <div class="project-title">
+                    Game Recommendation System 
+                    <span class="project-date">(2025)</span>
+                </div>
+                <p>Hybrid recommender system analyzing 10,000+ Steam user reviews. Built with scikit-learn, SVD, and TF-IDF. Features sentiment analysis (85% accuracy) and similarity-based recommendations.</p>
+                <div>
+                    <span class="tech-tag">scikit-learn</span>
+                    <span class="tech-tag">SVD</span>
+                    <span class="tech-tag">TF-IDF</span>
+                    <span class="tech-tag">Python</span>
+                </div>
+                <a href="https://github.com/TerenceTan1021/CSE158R_Assignment2" class="github-link" target="_blank">🔗 GitHub Repository</a>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <span class="skill">PyTorch</span>
+                <span class="skill">LangChain</span>
+                <span class="skill">RAG</span>
+                <span class="skill">ChromaDB</span>
+                <span class="skill">FastAPI</span>
+                <span class="skill">Docker</span>
+                <span class="skill">Streamlit</span>
+                <span class="skill">scikit-learn</span>
+                <span class="skill">Python</span>
+                <span class="skill">Git</span>
+                <span class="skill">AWS</span>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section>
+            <h2>Work Experience</h2>
+            <h3>Team Member (Cross-Trained) | Just Grill It | Barstow, CA</h3>
+            <p><em>2023 — Present</em></p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Worked across all roles including cashier, cook, and food prep — demonstrating versatility and quick learning</li>
+                <li>Trained new cashier on POS system and customer service protocols; new hire became fully operational within one week</li>
+                <li>Delivered customer service in fast-paced environment, handling 40-60 orders per shift</li>
+                <li>Collaborated with team of 6-8 during peak hours to maintain efficient workflow</li>
+            </ul>
+        </section>
+
+        <!-- Education Section -->
+        <section>
+            <h2>Education</h2>
+            <h3>University of California, San Diego</h3>
+            <p><strong>Bachelor of Science, Computer Science</strong> | 2022 — 2026 | GPA: 3.2/4.0</p>
+            <p>Relevant Coursework: Computer Vision, Machine Learning, Recommendation Systems, Music Generation</p>
+        </section>
+
+        <!-- Certifications Section -->
+        <section>
+            <h2>Certifications</h2>
+            <ul style="margin-left: 20px;">
+                <li><strong>CompTIA A+</strong> — In Progress (Expected: 2026)</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section>
+            <h2>Connect With Me</h2>
+            <div class="contact-links">
+                <a href="https://github.com/TerenceTan1021" target="_blank">🐙 GitHub</a>
+                <a href="https://www.linkedin.com/in/terence-tan-a9b95a367/" target="_blank">🔗 LinkedIn</a>
+                <a href="mailto:tetan1021@gmail.com">✉️ Email</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Built with 💜 by Terence Tan | UC San Diego CS Grad 2026</p>
+    </footer>
+</body>
+</html>
