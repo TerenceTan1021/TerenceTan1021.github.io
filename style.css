@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    padding: 0;
+}
+header {
+    background-color: #1B2631;
+    width: 100%;
+    min-height: 200px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
