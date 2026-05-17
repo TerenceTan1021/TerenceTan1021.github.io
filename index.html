@@ -8,7 +8,7 @@
   <title>Terence Tan Portfolio</title>
 </head>
 
-<body>
+<body id="home">
   <div id="header">
     <div class="'container">
       <nav>
@@ -33,12 +33,13 @@
         </div>
         <div class="about-col-2">
           <h1 class="sub-title">About Me</h1>
-          <p>Recent Univeristy of California, San Diego Graduate. Who is lookin for a Job in a AI/CyberSecuirty Field</p>
+          <p>Recent University of California, San Diego Graduate. Who is looking for a Job in an AI/Cybersecurity Field</p>
 
           <div class="tab-titles">
             <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
             <p class="tab-links" onclick="opentab('experience')">Experience</p>
             <p class="tab-links" onclick="opentab('education')">Education</p>
+            <p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
           </div>
           <div class="tab-contents active-tab" id="skills">
             <ul>
@@ -69,6 +70,14 @@
               </li>
             </ul>
           </div>
+          <div class="tab-contents" id="hobbies">
+            <ul>
+              <li>
+                <span>
+                  When I am not sitting on the computer , I enjoy drawing, Graphic Desiging, playing video games, and spending time with my family.
+                </span>
+              </li>
+            </ul>
         </div>
       </div>
     </div>
@@ -109,7 +118,7 @@
             <div class="contact-right">
               <form>
                 <input type="text" name="Name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholde="Your Email" required>
+                <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" rows = 6 placeholder="Your Message" required></textarea>
                 <button class="btn btn2" type="submit">Submit</button>
               </form>
