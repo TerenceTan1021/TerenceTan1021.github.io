@@ -2,35 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' href='style.css'>
   <title>Terence Tan Portfolio</title>
 </head>
 
 <body>
-  <header>
-    <a href=''>About me</a>
-    <a href=''>Projects</a>
-    <a href=''>Contact</a>
-    <a href=''>Resume</a>
-  </header>
+  <div id="header">
+    <div class="'container">
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+      </nav>
+      <div class="header-text">
+        <p>AI/Cybersecurity</p>
+        <h1> Hello, I'm <br> Terence Tan</h1>
+      </div>
+    </div>
+  </div>
+<!--------------about---------------->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/profilepicture.jpg">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>Recent Univeristy of California, San Diego Graduate. Who is lookin for a Job in a AI/CyberSecuirty Field</p>
 
-  <main>
-    <h1>Hello I'm Terence Tan</h1>
-    <p>
-      I am a recent graudate in March of 2026 with a Bachelor of Science in Computer Science from the University of California, San Diego. I have a strong passion for software development and have experience working on various projects, including web applications and mobile apps. I am proficient in programming languages such as Java, Python, and JavaScript, and I am always eager to learn new technologies and improve my skills. In my free time, I enjoy contributing to open-source projects and exploring new advancements in the tech industry.
-    </p>
-  </main>
-
-  <footer style='background-color: #1B2631; color: white; text-align: center; padding: 20px;'>
-    <hr>
-    author: Terence Tan
-    <br>
-    <a href='mailto:tetan1021@gmail.com'>tetan1021@gmail.com</a>
-    <br>
-    phone: +1 (760) 217-8202
-    <br>
-    &copy; 2026 Terence Tan
-  </footer>
-
+          <div class="tab-titles">
+            <p class="tab-links active-link">Skills</p>
+            <p class="tab-links">Experience</p>
+            <p class="tab-links">Education</p>
+          </div>
+          <div class="tab-contents">
+            <ul>
+              <li>
+                <span>
+                  Python, Java, C++, SQL
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
