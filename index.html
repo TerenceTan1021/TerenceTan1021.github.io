@@ -6,17 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' href='style.css'>
   <title>Terence Tan Portfolio</title>
+  <script src="https://kit.fontawesome.com/6db108c2ae.js" crossorigin="anonymous"></script>
 </head>
 
 <body id="home">
   <div id="header">
     <div class="'container">
       <nav>
-        <ul>
+        <ul id="sidemenu">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-x" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
       </nav>
       <div class="header-text">
         <p>AI/Cybersecurity</p>
@@ -84,7 +88,7 @@
   </div>
   <!-- Projects -->
    <div id="projects">
-      <div class="'container">
+      <div class="container">
         <h1 class="sub-title">Projects</h1>
         <div class="project-list">
           <div>
@@ -94,9 +98,9 @@
           </div>
 
           <div>
-            <h2>Project 2: Cybersecurity Tool</h2>
-            <p>Created a cybersecurity tool that detects and prevents common cyber threats. The tool uses machine learning algorithms to analyze network traffic and identify potential security breaches.</p>
-            <a href="#">Learn More</a>
+            <h2>Project 2: Data Analysis</h2>
+            <p>Cleaned and analyzed 3,900 customer transactions using Python (pandas) and PostgreSQL. Performed missing value imputation, feature engineering (age groups, purchase frequency), and loaded data into a relational database. Wrote 10 SQL queries to extract business insights including revenue by gender, customer segmentation (New/Returning/Loyal), discount effectiveness, and top products per category.</p>
+            <a href="https://github.com/TerenceTan1021/Customer_Behavior_Data/tree/main/Project_1_Employee" target="_blank">Link to Github</a>
           </div>
 
       </div>
@@ -111,17 +115,21 @@
               <p>tetan1021@gmail.com</p>
               <p>+1 (760) 217-8202</p>
               <div class="social-icons">
-                <a href=""></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/terence-tan-a9b95a367/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/TerenceTan1021" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
               </div>
-              <a href="" download class="btn btn2">Download Resume</a>
+              <a href="images/TerenceTan_Resume.pdf" download class="btn btn2">Download Resume</a>
             </div>
             <div class="contact-right">
-              <form>
+              <form name="Contact_form">
                 <input type="text" name="Name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows = 6 placeholder="Your Message" required></textarea>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" rows = 6 placeholder="Your Message" required></textarea>
                 <button class="btn btn2" type="submit">Submit</button>
               </form>
+              <span id="msg"></span>
             </div>
           </div>
         </div>
@@ -144,6 +152,42 @@
       event.currentTarget.classList.add("active-link");
       document.getElementById(tabname).classList.add("active-tab");
     }
+  </script>
+
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu() {
+      sidemenu.style.right = "0";
+    }
+    function closemenu() {
+      sidemenu.style.right = "-200px";
+    }
+  </script>
+
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz-s-JXIQQGPm3pPqnTg4WixKdG7FBwirDlBa-Pb7Fj2tc6KalIOTZWtmplfK3_JDwyeA/exec'
+    const form = document.forms['Contact_form']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          msg.innerHTML = "Submitted!, Thank you"
+          setTimeout(function() {
+            msg.innerHTML = "";
+          }, 5000);
+          form.reset();
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+          msg.innerHTML = "Submission failed. Please try again.";
+          msg.style.color = "red";
+        })
+        .finally(() => {
+          submitButton.disabled = false; // Re-enable the button
+        });
+    });
   </script>
 </body>
 </html>
